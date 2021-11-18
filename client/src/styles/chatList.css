@@ -1,0 +1,36 @@
+.chatlistContainer {
+  border-right: 2px solid grey;
+  height: 70vh;
+  padding: 2rem 0rem;
+}
+.chatlistContainer input {
+  width: 100%;
+  border: 1px solid grey;
+  padding: 0.5rem;
+}
+.chatlist {
+  overflow-y: scroll;
+  height: 99%;
+  padding: 1rem 0rem;
+}
+.chatlistItem {
+  border-bottom: 1px solid grey;
+  display: flex;
+  height: 6rem;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+.chatlistItem img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+.chatlistPersonDetails {
+  display: flex;
+  flex-direction: column;
+}
+.chatlistAHL {
+  display: flex;
+  color: grey;
+}

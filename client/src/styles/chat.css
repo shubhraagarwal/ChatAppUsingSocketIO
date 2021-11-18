@@ -1,0 +1,45 @@
+.chatHeader {
+  background-color: gray;
+  display: grid;
+  grid-template-areas:
+    "image name name name name settings"
+    "image name name name name settings";
+  grid-gap: 10px;
+  padding: 10px;
+  width: 36vw;
+}
+.chatHeaderImg {
+  grid-area: image;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+}
+.chatHeaderName {
+  grid-area: name;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+.chatBody {
+  display: flex;
+  align-items: flex-end;
+  height: 62vh;
+}
+
+.chatInput {
+  width: 33vw;
+  border: 1px solid gray;
+  height: 5vh;
+}
+.inputField {
+  display: flex;
+}
+.chatSend {
+  width: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(207, 57, 187);
+  border-radius: 50%;
+}
