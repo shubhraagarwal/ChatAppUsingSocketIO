@@ -6,6 +6,7 @@ function App() {
   const [active, setActive] = useState(true);
   const [input, setInput] = useState("");
   const [id, setId] = useState("");
+
   return (
     <div>
       <div className="border-solid border-2 border-gray-400 w-6/12 flex mx-auto mt-20">
@@ -19,7 +20,12 @@ function App() {
               onChange={(e) => setInput(e.target.value)}
               value={input}
             />
-            <button className="bg-blue-600" onClick={() => setId(input)}>
+            <button
+              className="bg-blue-600"
+              onClick={() => {
+                setId(input);
+              }}
+            >
               Create ID
             </button>
           </div>
