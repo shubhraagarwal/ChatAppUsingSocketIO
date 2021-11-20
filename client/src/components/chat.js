@@ -67,23 +67,23 @@ export default function Chat({ id }) {
       </div>
       <div className="chatBody">
         {chat.map((data) => {
-          console.log(data.chatKey === chatKey, data.id === id);
-          if (data.chatKey === chatKey || data.id === id) {
+          console.log(data, "inside map");
+          if (data.chatKey === chatKey && data.id === id) {
             return (
-              <div key={data.index} className="message">
+              <div key={data.index} className="sendMessage">
+                <div>{data.message}</div>
+                <div>{data.time}</div>
+              </div>
+            );
+          } else if (data.chatKey === id && data.id === chatKey) {
+            return (
+              <div key={data.index} className="receiveMessage">
                 {data.message}
-                {data.id}
                 {data.time}
               </div>
             );
-          } else if (data.chatKey === id || data.id === chatKey) {
-            return (
-              <div key={data.index} style={{ color: "blue" }}>
-                {data.message}
-                {data.id}
-                {data.time}
-              </div>
-            );
+          } else {
+            return null;
           }
         })}
         <div className="inputField">
